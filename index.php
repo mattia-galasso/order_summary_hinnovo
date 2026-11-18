@@ -1,5 +1,8 @@
 <!-- Array di ordini -->
 <?php
+
+require_once './functions.php';
+
 $primary_orders = [
     ["id" => 1, "importo" => 120.98, "stato" => "pagato"],
     ["id" => 2, "importo" => 15.30, "stato" => "in_attesa"],
@@ -34,46 +37,10 @@ $secondary_orders = [
 
 <body>
     <?php
-    echo "<pre>";
-    /* var_dump($primary_orders); */
-    /* var_dump($secondary_orders); */
-    echo "</pre>";
-    ?>
-
-    <!-- Resultato Ordini -->
-    <?php
-    /* 
-    Creo la funzione che riceve un'array di ordini e restituisce somma e numeri di ordini pagati 
-    */
-    function results($orders_array)
-    {
-        /* Creo due variabili, una per la somma e una per lo stato */
-        $orders_sum = 0;
-        $paid_orders = 0;
-
-        /* Prendo un'ordine per volta */
-        foreach ($orders_array as $order) {
-            /* 
-            SE 
-            - lo stato dell'ordine è pagato 
-            - è presente la key importo
-            - non è una stringa ma un valore numerico
-            - l'importo dell'ordine è superiore a 0 
-            ALLORA 
-            */
-            if ($order["stato"] === "pagato" && isset($order["importo"]) && !is_string($order["importo"]) && $order["importo"] > 0) {
-                /* Aggiungo 1 a paid_orders */
-                $paid_orders++;
-
-                /* Sommo l'importo dell'ordine con orders_sum    */
-                $orders_sum = $orders_sum + $order["importo"];
-            }
-        }
-
-        /* Alla chiamata della funzione stampo il totale e il numero di ordini validi*/
-        echo "Totale: " . $orders_sum . "; Ordini validi conteggiati: " . $paid_orders;
-    }
-
+    /* echo "<pre>";
+    var_dump($primary_orders);
+    var_dump($secondary_orders);
+    echo "</pre>"; */
     ?>
 
     <div style="margin-top: 5rem;">
