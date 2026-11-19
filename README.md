@@ -1,4 +1,4 @@
-# PROVA TECNICA — RIEPILOGO ORDINI (durata indicativa: 30–40 minuti)
+# PROVA TECNICA — RIEPILOGO ORDINI
 
 ## Consegna
 Scrivi una funzione che riceva una lista di ordini, ciascuno con ID,
