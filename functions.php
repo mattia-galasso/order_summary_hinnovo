@@ -1,4 +1,4 @@
-<!-- Resultato Ordini -->
+<!-- Risultato Ordini -->
 <?php
 /* Creo la funzione che riceve un'array di ordini e restituisce somma e numeri di ordini pagati */
 
