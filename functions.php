@@ -1,8 +1,14 @@
 <!-- Resultato Ordini -->
 <?php
-/* 
-    Creo la funzione che riceve un'array di ordini e restituisce somma e numeri di ordini pagati 
-    */
+/* Creo la funzione che riceve un'array di ordini e restituisce somma e numeri di ordini pagati */
+
+/**
+ * Calcola e stampa il totale degli importi degli ordini pagati validi e il numero di ordini conteggiati.
+ * Ignora gli ordini annullati, in attesa e quelli con dati non validi.
+ *
+ * @param array $orders_array Array di ordini, ognuno con id, importo e stato
+ * @return void
+ */
 function results($orders_array)
 {
     /* Creo due variabili, una per la somma e una per lo stato */

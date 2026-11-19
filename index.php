@@ -1,7 +1,7 @@
 <!-- Array di ordini -->
 <?php
 
-require_once './functions.php';
+require_once __DIR__ . '/functions.php';
 
 $primary_orders = [
     ["id" => 1, "importo" => 120.98, "stato" => "pagato"],
@@ -43,14 +43,14 @@ $secondary_orders = [
     echo "</pre>"; */
     ?>
 
-    <div style="margin-top: 5rem;">
+    <div style="margin: 5rem 0 0 5rem;">
         <h2>Array Corretta:</h2>
 
         <h3>Risultato:</h3>
         <p><?php results($primary_orders); ?></p>
     </div>
 
-    <div style="margin-top: 5rem;">
+    <div style="margin: 5rem 0 0 5rem;">
         <h2>Array con valori non validi:</h2>
 
         <h3>Risultato:</h3>
